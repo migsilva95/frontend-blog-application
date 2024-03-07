@@ -109,12 +109,8 @@
       "content": "Cras lectus nisl, scelerisque quis elit ut, luctus scelerisque purus."
     },
     {
-      "id": 3,
-      "postId": 1,
-      "parent_id": 2,
-      "user": "Amelia",
-      "date": "2016-02-24",
-      "content": "Cras est nunc, tempus eget risus vitae, vulputate ornare magna."
+      "content": "Cras est nunc, tempus eget risus vitae, vulputate ornare",
+      "id": 3
     },
     {
       "id": 4,
@@ -125,12 +121,8 @@
       "content": "Mauris malesuada a tellus at mollis. Nam eu eros ipsum."
     },
     {
-      "id": 5,
-      "postId": 1,
-      "parent_id": null,
-      "user": "Shella",
-      "date": "2016-02-24",
-      "content": "Mauris vitae sem in nisl pharetra dapibus in nec orci."
+      "content": "Mauris vitae sem in nisl pharetra dapibus in nec ",
+      "id": 5
     },
     {
       "id": 6,
@@ -147,6 +139,13 @@
       "user": "Natashia",
       "date": "2016-03-17",
       "content": "Nunc facilisis nisi vitae dapibus sodales. Proin vitae nunc turpis."
+    },
+    {
+      "postId": "10",
+      "user": "teste1",
+      "date": "2024-03-05T10:49",
+      "content": "teste1",
+      "id": 8
     }
   ]
 }

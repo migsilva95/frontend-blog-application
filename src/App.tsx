@@ -12,7 +12,7 @@ function App() {
       {postId === 0 ?
         <Table setPostId={setPostId} />
       :
-        <Post postId={postId} />
+        <Post postId={postId} setPostId={setPostId} />
       }
     </ChakraProvider>
   );

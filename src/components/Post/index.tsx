@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Card, CardBody, CardHeader, Heading, Stack, Text } from '@chakra-ui/react';
+import { Button, Card, CardBody, CardHeader, Heading, Stack, Text } from '@chakra-ui/react';
 import { BlogListType } from '../../types/blogList.type';
 import parse from 'html-react-parser';
 import Comments from './Comments';
 
-function Post({postId}: {postId: number}) {
+function Post({postId, setPostId}: {postId: number, setPostId: (value: number) => void}) {
 
     const [post, setPost] = useState<BlogListType | null>(null)
 
@@ -19,28 +19,29 @@ function Post({postId}: {postId: number}) {
 
   return (
     <>
-        <Stack spacing='4'>
-            {
-                post &&
-                    <Card>
-                        <CardHeader>
-                            <Heading size='md'>{post.title}</Heading>
-                            <Heading size='xs'>{post.author}</Heading>
-                        </CardHeader>
-                        <CardBody>
-                            <Text pt='2' fontSize='sm'>
-                                {post.publish_date}
-                            </Text>
-                            <Text pt='2' fontSize='sm'>
-                                {post.description}
-                            </Text>
-                            <Text pt='2' fontSize='sm'>
-                                {parse(post.content)}
-                            </Text>
-                        </CardBody>
-                    </Card>
-            }
-        </Stack>
+        <br />
+        <Button colorScheme='blue' onClick={() => setPostId(0)}>Go Back</Button>
+        <br />
+        {
+            post &&
+                <Card>
+                    <CardHeader>
+                        <Heading size='lg'>{post.title}</Heading>
+                        <Heading size='xs'>{post.author}</Heading>
+                    </CardHeader>
+                    <CardBody>
+                        <Text pt='2' fontSize='sm'>
+                            {post.publish_date}
+                        </Text>
+                        <Text pt='2' fontSize='sm'>
+                            {post.description}
+                        </Text>
+                        <Text pt='2' fontSize='sm'>
+                            {parse(post.content)}
+                        </Text>
+                    </CardBody>
+                </Card>
+        }
         <Comments postId={postId}/>
     </>
   );

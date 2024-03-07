@@ -17,45 +17,48 @@ function Table({setPostId}:{setPostId: (value: number) => void}) {
     },[])
 
   return (
-    <Stack spacing='4'>
-        {
-            postList ?
-                <>
-                    {postList.map((pL) => {
-                        return (
-                            <Card>
-                                <CardHeader>
-                                    <Heading size='md'>{pL.title}</Heading>
-                                    <Heading size='xs'>{pL.author}</Heading>
-                                </CardHeader>
-                                <CardBody>
-                                    <Text pt='2' fontSize='sm'>
-                                        {pL.publish_date}
-                                    </Text>
-                                    <Text pt='2' fontSize='sm'>
-                                        {pL.description}
-                                    </Text>
-                                    <Text pt='2' fontSize='sm'>
-                                        {parse(pL.content)}
-                                    </Text>
-                                </CardBody>
-                                <CardFooter>
-                                    <Button colorScheme='blue' onClick={() => setPostId(pL.id)}>View Post</Button>
-                                </CardFooter>
-                            </Card>
-                        )
-                    })}
-                </>
-                : 
-                <Card>
-                    <CardBody>
-                        <Text pt='2' fontSize='sm'>
-                            {"No data found"}
-                        </Text>
-                    </CardBody>
-                </Card>
-        }
-    </Stack>
+    <>
+        <Text fontSize='4xl'>Posts</Text>
+        <Stack spacing='4'>
+            {
+                postList ?
+                    <>
+                        {postList.map((pL) => {
+                            return (
+                                <Card>
+                                    <CardHeader>
+                                        <Heading size='md'>{pL.title}</Heading>
+                                        <Heading size='xs'>{pL.author}</Heading>
+                                    </CardHeader>
+                                    <CardBody>
+                                        <Text pt='2' fontSize='sm'>
+                                            {pL.publish_date}
+                                        </Text>
+                                        <Text pt='2' fontSize='sm'>
+                                            {pL.description}
+                                        </Text>
+                                        <Text pt='2' fontSize='sm'>
+                                            {parse(pL.content)}
+                                        </Text>
+                                    </CardBody>
+                                    <CardFooter>
+                                        <Button colorScheme='blue' onClick={() => setPostId(pL.id)}>View Post</Button>
+                                    </CardFooter>
+                                </Card>
+                            )
+                        })}
+                    </>
+                    : 
+                    <Card>
+                        <CardBody>
+                            <Text pt='2' fontSize='sm'>
+                                {"No data found"}
+                            </Text>
+                        </CardBody>
+                    </Card>
+            }
+        </Stack>
+    </>
   );
 }
 
