@@ -20,7 +20,7 @@ function Post({postId, setPostId}: {postId: number, setPostId: (value: number) =
   return (
     <>
         <br />
-        <Button colorScheme='blue' onClick={() => setPostId(0)}>Go Back</Button>
+        <Button data-testid="go-back-button" colorScheme='blue' onClick={() => setPostId(0)}>Go Back</Button>
         <br />
         {
             post &&

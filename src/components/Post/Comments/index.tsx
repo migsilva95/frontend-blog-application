@@ -57,7 +57,7 @@ function Comments({postId}:{postId: number}) {
   return (
     <>
         <br />
-        <Text fontSize='2xl'>Comments</Text>
+        <Text data-testid="comments-title" fontSize='2xl'>Comments</Text>
         <br />
         <Stack spacing='4'>
             <Card>

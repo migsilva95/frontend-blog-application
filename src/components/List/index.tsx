@@ -4,7 +4,7 @@ import { Button, Card, CardBody, CardFooter, CardHeader, Heading, Stack, Text } 
 import { BlogListType } from '../../types/blogList.type';
 import parse from 'html-react-parser';
 
-function Table({setPostId}:{setPostId: (value: number) => void}) {
+function List({setPostId}:{setPostId: (value: number) => void}) {
 
     const [postList, setPostList] = useState<BlogListType[]>([])
 
@@ -18,7 +18,7 @@ function Table({setPostId}:{setPostId: (value: number) => void}) {
 
   return (
     <>
-        <Text fontSize='4xl'>Posts</Text>
+        <Text data-testid="posts-title" fontSize='4xl'>Posts</Text>
         <Stack spacing='4'>
             {
                 postList ?
@@ -62,4 +62,4 @@ function Table({setPostId}:{setPostId: (value: number) => void}) {
   );
 }
 
-export default Table;
+export default List;

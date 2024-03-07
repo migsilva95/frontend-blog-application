@@ -109,20 +109,12 @@
       "content": "Cras lectus nisl, scelerisque quis elit ut, luctus scelerisque purus."
     },
     {
-      "content": "Cras est nunc, tempus eget risus vitae, vulputate ornare",
-      "id": 3
-    },
-    {
       "id": 4,
       "postId": 1,
       "parent_id": 1,
       "user": "Natashia",
       "date": "2016-02-23",
       "content": "Mauris malesuada a tellus at mollis. Nam eu eros ipsum."
-    },
-    {
-      "content": "Mauris vitae sem in nisl pharetra dapibus in nec ",
-      "id": 5
     },
     {
       "id": 6,
